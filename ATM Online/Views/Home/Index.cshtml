@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-6 marginTop">
+        <a href="@Url.Action("Withdrawal", "Transaction", new{CheckingAccountId = ViewBag.CheckingAccountId})" class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-circle-arrow-down"></span> Withdrawal</a>
+        <a href="@Url.Action("Deposit", "Transaction", new{CheckingAccountId = ViewBag.CheckingAccountId})" class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-circle-arrow-down"></span> Deposit</a>
+        <a href="@Url.Action("Statement","ChekingAccount",new { id = ViewBag.CheckingAccountId})" class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-th-list"></span> Print Statement</a></div>
+    <div class="col-md-6 marginTop">
+        <a href="@Url.Action("Transfer", "Transaction", new{CheckingAccountId = ViewBag.CheckingAccountId})" class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-circle-arrow-down"></span> Transfer</a>
+        <a href="@Url.Action("Details","ChekingAccount")" class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-circle-arrow-down"></span> Balance Inquiry</a>
+        <a  href="@Url.Action("TransChart","Transaction",new { id = ViewBag.CheckingAccountId})" class="btn btn-primary btn-block btn-lg">
+            <span class="glyphicon glyphicon-th-list"></span> Transaction Table</a></div>
+   
+    <div class="col-md-12" style="">
+        <div class="col-md-6 marginTop marginBottom">
+            <img src="~/Content/images/ATM.jpeg" class="img-responsive media-left marginTop" />
+        </div>
+        <div class="col-md-6 marginTop marginBottom">
+            <p class="body-textFormat"> Convenience is a major advantage of online banking. Basic banking transactions such as paying bills can easily be 
+  performed at times convenient to consumers.  </p>
+        </div>
+    </div>
+</div>
+    
+
